@@ -8,7 +8,7 @@
         "Telegram Bot",
         "SayuOgiwara"
     ],
-    "repository": "https://github.com/TaprisSugarbell/SayuRawrBot",
+    "repository": "https://github.com/TaprisSugarbell/UnrarBot",
     "success_url": "https://telegram.dog/SayuCodez",
     "env": {
         "WEBHOOK": {
