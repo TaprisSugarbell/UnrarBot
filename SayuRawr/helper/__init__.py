@@ -3,8 +3,9 @@ import re
 import glob
 import random
 import string
+import rarfile
 from .. import sayulogs
-from unrar import rarfile
+from rarfile import PasswordRequired
 
 
 def random_key(_string=string.hexdigits, _range: int = 10):
@@ -17,9 +18,10 @@ def unrar_file(_path, _folder, pwd=None):
         try:
             etr = rarfile.RarFile(_path)
             etr.extractall(_folder)
-        except RuntimeError:
-            etr = rarfile.RarFile(_path, pwd=pwd)
-            etr.extractall(_folder)
+        except PasswordRequired:
+            # sayulogs.error("Error.", exc_info=e)
+            etr = rarfile.RarFile(_path)
+            etr.extractall(_folder, pwd=pwd)
     return _folder
 
 
