@@ -1,0 +1,61 @@
+{
+    "name": "SayuRawrBot",
+    "description": "Este bot sirve para descomprimir archivos rar...",
+    "logo": "https://i.imgur.com/S4Zlx0G.png",
+    "keywords": [
+        "Sayu",
+        "Rawr",
+        "Telegram Bot",
+        "SayuOgiwara"
+    ],
+    "repository": "https://github.com/TaprisSugarbell/SayuRawrBot",
+    "success_url": "https://telegram.dog/SayuCodez",
+    "env": {
+        "WEBHOOK": {
+            "description": "Dejalo así!",
+            "value": "ANYTHING"
+        },
+        "BOT_TOKEN": {
+            "description": "Tu Token de Telegram de @BotFather",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Obtener de my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Obtener de my.telegram.org",
+            "value": ""
+        },
+        "DEV": {
+            "description": "ID del desarrollador",
+            "value": "784148805"
+        },
+        "DB": {
+            "description": "Nombre de colección en MongoDB",
+            "value": "DB"
+        },
+        "ID": {
+            "description": "No me acuerdo pero dejar así",
+            "value": "ID"
+        },
+        "MONGO_URL": {
+            "description": "URI de MongoDB",
+            "value": "*"
+        }
+    },
+    "addons": [],
+    "buildpacks": [{
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }, {
+        "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+    }, {
+        "url": "heroku/python"
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}

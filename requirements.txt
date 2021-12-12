@@ -1,0 +1,8 @@
+moviepy
+Pillow
+pydub
+pyrogram
+python-decouple
+rarfile
+TgCrypto
+unrar
